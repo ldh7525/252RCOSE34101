@@ -1,9 +1,0 @@
-ldh7525@BOOK-BN5IMR2J4T:~/ass2$ sudo sh run.sh
-[sudo] password for ldh7525: 
-Creating Process #00 (PID: 13460, nice: 19) with matrix size 100
-                                                                Creating Process #00 (PID: 13461, nice: 0) with matrix size 100
-                                                                                                                              Creating Process #00 (PID: 13462, nice: 10) with matrix size 100
-Process (PID: 13461) finished in 0.1386 seconds.
-                                                Process (PID: 13462) finished in 0.2520 seconds.
-Process (PID: 13460) finished in 0.3513 seconds.
-ldh7525@BOOK-BN5IMR2J4T:~/ass2$ 
