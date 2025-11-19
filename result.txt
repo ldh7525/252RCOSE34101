@@ -1,0 +1,43 @@
+ldh7525@BOOK-BN5IMR2J4T:~/os_test$ ./call_my_linked_list
+--- 1. Calling 'add' system call (add to front with random values) ---
+Add : 634
+Add : 75
+Add : 798
+
+--- 2. Calling 'insert' system call (insert after a node) ---
+Insert : 535
+Insert : 720
+Insert : 229
+
+--- 3. Calling 'remove' system call ---
+Remove : 634
+Remove : 75
+Remove : 798
+Remove : 535
+Remove : 720
+Remove : 229
+ldh7525@BOOK-BN5IMR2J4T:~/os_test$ dmesg
+[ 2634.138716] [Sys_call] os2025_add();
+[ 2634.138722] List Head -> [634] -> NULL
+[ 2634.138735] [Sys_call] os2025_add();
+[ 2634.138736] List Head -> [75] -> [634] -> NULL
+[ 2634.138738] [Sys_call] os2025_add();
+[ 2634.138739] List Head -> [798] -> [75] -> [634] -> NULL
+[ 2634.138743] [Sys_call] os2025_insert();
+[ 2634.138744] List Head -> [798] -> [75] -> [634] -> [535] -> NULL
+[ 2634.138745] [Sys_call] os2025_insert();
+[ 2634.138746] List Head -> [798] -> [75] -> [720] -> [634] -> [535] -> NULL
+[ 2634.138747] [Sys_call] os2025_insert();
+[ 2634.138748] List Head -> [798] -> [229] -> [75] -> [720] -> [634] -> [535] -> NULL
+[ 2634.138751] [Sys_call] os2025_remove();
+[ 2634.138752] List Head -> [798] -> [229] -> [75] -> [720] -> [535] -> NULL
+[ 2634.138754] [Sys_call] os2025_remove();
+[ 2634.138755] List Head -> [798] -> [229] -> [720] -> [535] -> NULL
+[ 2634.138756] [Sys_call] os2025_remove();
+[ 2634.138757] List Head -> [229] -> [720] -> [535] -> NULL
+[ 2634.138758] [Sys_call] os2025_remove();
+[ 2634.138759] List Head -> [229] -> [720] -> NULL
+[ 2634.138760] [Sys_call] os2025_remove();
+[ 2634.138761] List Head -> [229] -> NULL
+[ 2634.138762] [Sys_call] os2025_remove();
+[ 2634.138762] List Head -> NULL
